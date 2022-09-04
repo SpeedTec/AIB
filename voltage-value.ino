@@ -20,7 +20,7 @@ void loop(){
 
   // Analog input is being made with a potentiometer for now.
   // The idea is to use a weight tracking scale that works in the same way.
-  v();
+  vl();
 
   if (voltage >= 0.55 and voltage <= 1.65){
     Serial.println("Giraffe");
