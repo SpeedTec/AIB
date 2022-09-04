@@ -14,7 +14,7 @@ void vl(){
 }
 
 void loop(){
-  //giraffe = (voltage >= 0 and voltage <= 1.65);
+  //giraffe = (voltage >= 0.55 and voltage <= 1.65);
   //cow = (voltage >= 1.66 and voltage <= 3.34);
   //elephant = (voltage >= 3.35 and voltage <= 5);
 
