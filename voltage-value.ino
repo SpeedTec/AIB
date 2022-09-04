@@ -24,7 +24,7 @@ void loop(){
 
   if (voltage >= 0.55 and voltage <= 1.65){
     Serial.println("Giraffe");
-    while(voltage > 0.55 and voltage <= 1.65){
+    while(voltage >= 0.55 and voltage <= 1.65){
       vl();
     }
   }
