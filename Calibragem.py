@@ -9,7 +9,10 @@ while t1 < 3:
     else:
         t1 = 0
         print("Não passou")
-    lastVoltage = voltage
+        lastVoltage = 0
+        voltage = 0
+
     voltage = float(input("Digite a tensão: "))
+    lastVoltage = voltage
 
 print("Calibragem concluída")
