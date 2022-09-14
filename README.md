@@ -11,9 +11,4 @@ o simples parecer complexo.
 
 ## Como resolver o problema
 
-  Rapidamente pensamos em usar o Arduino como o responsável de fazer o reconhecimento dos brinquedos, mas tivemos que decidir como identificálos:
-  * Sensor de cor;
-  * Célula de peso;
-
-Na primeira impressão, pensavamos que usar o Sensor de cor seria a maneira mais fácil de identificar os animais, porém, ficamos preocupados de ter que analisar vários
-níveis de cores para sempre ter
+  Como decisão final, pensamos em utilizar uma célula de peso para identificar os seres através do estudo dos valores de cada um. Até o momento da última modificação do README, não tivemos a oportunidade de de aplicar os testes na prática, mas, esperamos obter os mesmos resultados.
