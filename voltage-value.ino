@@ -1,5 +1,4 @@
-// We were having problems to create these variables inside the setup
-int sensorValue;
+int t1;
 float voltage;
 float lastVoltage;
 
@@ -8,39 +7,46 @@ void setup(){
   pinMode(A0, INPUT);
 }
 
-void vl(){
-  sensorValue = analogRead(A0);
-  voltage = sensorValue * (5.00 / 1023);
-}
-
 void loop(){
-  //giraffe = (voltage >= 0.55 and voltage <= 1.65);
-  //cow = (voltage >= 1.66 and voltage <= 3.34);
-  //elephant = (voltage >= 3.35 and voltage <= 5);
+  t1 = 0;
+  Serial.println("Waiting and checking...");
+  
+  //calib-logic.py, but converted in c++ logic and with the potentiometer input;
+  while(voltage <= 0.54 or t1 < 15){ //t1 * 100 is the time in milleseconds to confirm the calibration;
+    voltage = analogRead(A0) * (5.00 / 1023);
+    
+    if (voltage >= 0.54 and voltage >= (lastVoltage - (lastVoltage / 10)) and voltage <= (lastVoltage + lastVoltage / 10)){
+      t1 += 1;
+    }
+    else{
+      t1 = 0;
+    }
 
-  // Analog input is being made with a potentiometer for now.
-  // The idea is to use a weight tracking scale that works in the same way.
-  vl();
+    delay(100);
+    lastVoltage = voltage;
+  }
 
+  Serial.println("Done!");
+  Serial.print("Animal: ");
+  
   if (voltage >= 0.55 and voltage <= 1.65){
     Serial.println("Giraffe");
-    while(voltage >= 0.55 and voltage <= 1.65){
-      vl();
+    while(voltage >= 0.5){
+      voltage = analogRead(A0) * (5.00 / 1023);
     }
   }
+  
   else if(voltage >= 1.66 and voltage <= 3.34){
     Serial.println("Cow");
-    lastVoltage = voltage;
-    while(voltage >= 1.66 and voltage <= 3.34){
-       vl();
+    while(voltage >= 0.5){
+        voltage = analogRead(A0) * (5.00 / 1023);
     }
   }
+  
   else if(voltage >= 3.35 and voltage <= 5){
     Serial.println("Elephant");
-    lastVoltage = voltage;
-    while(voltage >= 3.35 and voltage <= 5){
-      vl();
+    while(voltage >= 0.5){
+      voltage = analogRead(A0) * (5.00 / 1023);
     }
   }
-  else {}
 }
