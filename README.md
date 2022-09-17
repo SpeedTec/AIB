@@ -8,9 +8,9 @@
 
 ## Materiais
 
-    - STM32 Nucleo-64 | F401RE(temporário);  
-	- [Arduino_Core_STM32](https://github.com/stm32duino/Arduino_Core_STM32) by [stm32duino](https://github.com/stm32duino) (temporário);  
-	- Arduino IDE;  
-	- Célula de carga 1Kg (ainda não testado e substituído por um potenciômetro);  
-	- Leitor de cartão SD para Arduino (ainda não testado);  
-	- Alto-falante 8Ω (ainda não testado);
+* STM32 Nucleo-64 | F401RE(temporário);  
+* [Arduino_Core_STM32](https://github.com/stm32duino/Arduino_Core_STM32) by [stm32duino](https://github.com/stm32duino) (temporário);  
+* Arduino IDE;  
+* Célula de carga 1Kg (ainda não testado e substituído por um potenciômetro);  
+* Leitor de cartão SD para Arduino (ainda não testado);  
+* Alto-falante 8Ω (ainda não testado);
